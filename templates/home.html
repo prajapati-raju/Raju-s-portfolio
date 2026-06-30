@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="home" id="home">
+    <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Raju Prajapati</h1>
+        <h3>I'm a <span>Frontend Developer</span></h3>
+        <p>"Namaste! Main <b>Raju Prajapati</b>, ek aspiring Web Developer aur Computer Science ka student hu . Meri
+            expertise
+            Python-Django stack aur UI/UX design mein hai. Maine e-commerce projects par kaam kiya hai aur mujhe coding
+            ke zariye ideas ko reality mein badalna achha lagta hai. Main ek quick learner hoon jo hamesha
+            detail-oriented kaam karne mein vishwas rakhta hoon."
+        </p>
+
+
+
+        <div class="social-media">
+            <ul class="wrapper">
+                <li class="icon facebook">
+                    <span class="tooltip">Facebook</span>
+                    <i href="#" class="fa-brands fa-facebook-f"></i>
+                </li>
+                <li class="icon twitter">
+                    <span class="tooltip">Twitter</span>
+                    <i  href="#" class="fa-brands fa-twitter"></i>
+                </li>
+                <li class="icon instgram">
+                    <span class="tooltip">Instgram</span>
+                    <i  href="#" class="fa-brands fa-instagram"></i>
+                </li>
+                <li class="icon github">
+                    <span class="tooltip">Github</span>
+                    <i  href="#" class="fa-brands fa-github"></i>
+                </li>
+                <li class="icon youtube">
+                    <span class="tooltip">Youtube</span>
+                    <i  href="#" class="fa-brands fa-youtube"></i>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="btn">Download CV</a>
+
+    </div>
+
+    <div class="home-img">
+        <img src="{% static 'image/rajupic1.png' %}" alt="Profile Picture">
+    </div>
+
+
+</section>
+
+
+
+
+
+
+{% endblock %}

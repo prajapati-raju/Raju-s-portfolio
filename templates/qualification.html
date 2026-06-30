@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualifications Only</title>
+    <!-- FontAwesome for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- Clean Reset & Variables --- */
+       
+        :root {
+            --bg-dark: #090d16;        /* Deep space background */
+            --accent-glow: #10b981;    /* Premium Emerald Green Accent */
+            --text-pure: #ffffff;
+            --text-muted: #6b7280;     /* Slate gray text */
+            --text-content: #9ca3af;   /* Light gray text */
+            --track-color: #1f2937;    /* Timeline line color */
+        }
+
+        
+
+        .qual-container {
+            max-width: 950px;
+            width: 100%;
+            min-height: 700px;
+            padding: 0px 70px;
+            margin-top: 120px;
+        }
+
+        /* --- Header --- */
+        .qual-header {
+            margin-bottom: 3.5rem;
+            text-align: left;
+        }
+
+        .qual-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .qual-header h2 span {
+            color: var(--accent-glow);
+        }
+
+        .qual-header p {
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* --- Vertical Minimal Track --- */
+        .qual-track {
+            position: relative;
+            border-left: 2px solid var(--track-color);
+            padding-left: 2.5rem;
+            margin-left: 0.5rem;
+        }
+
+        /* --- Track Item --- */
+        .qual-item {
+            position: relative;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .qual-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Active/Visible State via JS */
+        .qual-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Track Node (Dot) */
+        .qual-node {
+            position: absolute;
+            left: calc(-2.5rem - 7px); /* Align perfectly over the left border */
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--bg-dark);
+            border: 2px solid var(--text-muted);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        /* Hover effect on item triggers node glow */
+        .qual-item:hover .qual-node {
+            background-color: var(--accent-glow);
+            border-color: var(--accent-glow);
+            box-shadow: 0 0 12px var(--accent-glow);
+            transform: scale(1.3);
+        }
+
+        /* --- Content Layout --- */
+        .qual-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .qual-date {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-glow);
+            background: rgba(16, 185, 129, 0.1);
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+
+        .qual-score {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .qual-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-pure);
+            margin-bottom: 0.3rem;
+        }
+
+        .qual-institute {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .qual-institute i {
+            font-size: 0.9rem;
+        }
+
+        .qual-desc {
+            font-size: 0.95rem;
+            color: var(--text-content);
+            line-height: 1.6;
+            max-width: 650px;
+        }
+
+        /* --- Responsive Tweaks --- */
+        @media (max-width: 600px) {
+            body {
+                padding: 2rem 1rem;
+            }
+            .qual-track {
+                padding-left: 1.8rem;
+                margin-left: 0.2rem;
+            }
+            .qual-node {
+                left: calc(-1.8rem - 7px);
+            }
+            .qual-title {
+                font-size: 1.2rem;
+            }
+            .qual-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="qual-container">
+        <!-- Header -->
+        <div class="qual-header">
+            <h2>Education & <span>Qualifications</span></h2>
+            <p>Mera poora academic safar ek nazar me</p>
+        </div>
+
+        <!-- Timeline Track -->
+        <div class="qual-track">
+
+            <!-- Item 1 -->
+            <div class="qual-item">
+                <div class="qual-node"></div>
+                <div class="qual-meta">
+                    <span class="qual-date">2023 - 2025</span>
+                    <span class="qual-score"><i class="fas fa-star"></i> CGPA: 8.8 / 10</span>
+                </div>
+                <h3 class="qual-title">Master of Computer Applications (MCA)</h3>
+                <div class="qual-institute"><i class="fas fa-university"></i> University School of Information Technology</div>
+                <p class="qual-desc">Advanced algorithms, web engineering, aur cloud systems me specialization. Kai core projects par kaam kiya.</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="qual-item">
+                <div class="qual-node"></div>
+                <div class="qual-meta">
+                    <span class="qual-date">2020 - 2023</span>
+                    <span class="qual-score"><i class="fas fa-percentage"></i> Aggregate: 81%</span>
+                </div>
+                <h3 class="qual-title">Bachelor of Computer Applications (BCA)</h3>
+                <div class="qual-institute"><i class="fas fa-graduation-cap"></i> National Institute of Management & Science</div>
+                <p class="qual-desc">Computer science fundamentals, OOPs paradigms (Java/C++), database architecture (SQL), aur core development tools seekhe.</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="qual-item">
+                <div class="qual-node"></div>
+                <div class="qual-meta">
+                    <span class="qual-date">2019 - 2020</span>
+                    <span class="qual-score"><i class="fas fa-percentage"></i> Score: 85%</span>
+                </div>
+                <h3 class="qual-title">Senior Secondary School (12th Grade)</h3>
+                <div class="qual-institute"><i class="fas fa-school"></i> Central Public Senior Secondary School</div>
+                <p class="qual-desc">Science Stream (Physics, Chemistry, Mathematics) se parhai puri ki, jahan se logical aur analytical problem-solving strong hui.</p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="qual-item">
+                <div class="qual-node"></div>
+                <div class="qual-meta">
+                    <span class="qual-date">2017 - 2018</span>
+                    <span class="qual-score"><i class="fas fa-star"></i> CGPA: 9.0 / 10</span>
+                </div>
+                <h3 class="qual-title">High School Education (10th Grade)</h3>
+                <div class="qual-institute"><i class="fas fa-school"></i> St. Xavier's Secondary School</div>
+                <p class="qual-desc">General school education jisme science aur maths me behtareen pradarshan ke sath board exams clear kiye.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- --- JS for Smooth Staggered Loading --- -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const items = document.querySelectorAll('.qual-item');
+            
+            // Elements ek-ek karke cascade animation ke saath load honge
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, index * 200); /* 200ms space between each entry */
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+{% endblock %}

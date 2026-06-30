@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="contact" id="contact">
+    <h2 class="headingg">Contact <span>Me</span></h2>
+    <form action="#">
+        <div class="input-Box">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder=" Email Address" required>
+            
+        </div>
+        <div class="input-Box">
+           <input type="number" placeholder=" Mobile Number" required>
+           <input type="text" placeholder="Email Subject" required>
+            
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="btn">
+        
+    </form>
+       
+</div>
+
+{% endblock %}

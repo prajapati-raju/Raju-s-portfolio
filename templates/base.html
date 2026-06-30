@@ -1,0 +1,333 @@
+{% load static %}
+
+
+<html>
+
+
+<head>
+
+
+    <link rel="stylesheet" href="{% static 'css/custom.css'%}" />
+    <script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <title>Raju's Portfolio</title>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
+
+
+</head>
+
+
+<body>
+
+    <header class="header">
+        <a href="/base/" class="logo"><b>Raju's Portfolio</b></a>
+
+        <i class='bx  bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="/home/" class="active">Home</a>
+            <a href="/about/">About</a>
+            <a href="/portfolio/">Achivments</a>
+            <a href="/services/">Services</a>
+            <a href="/contact/">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content">
+
+        {% block content %}
+
+        <!-- //**  Home Section starts here  **// -->
+
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello, It's Me</h3>
+                <h1>Raju Prajapati</h1>
+                <h3>I'm a <span class="multiple-text"></span></h3>
+                <p>"Namaste! Main <b>Raju Prajapati</b>, ek aspiring Web Developer aur Computer Science ka student hu .
+                    Meri
+                    expertise
+                    Python-Django stack aur UI/UX design mein hai. Maine e-commerce projects par kaam kiya hai aur mujhe
+                    coding
+                    ke zariye ideas ko reality mein badalna achha lagta hai. Main ek quick learner hoon jo hamesha
+                    detail-oriented kaam karne mein vishwas rakhta hoon."
+                </p>
+
+                <div>
+                    <ul class="wrapper">
+                        <li class="icon facebook">
+                            <span class="tooltip">Facebook</span>
+                            <span><i href="#" class="fa-brands fa-facebook-f"></i></span>
+                        </li>
+                        <li class="icon twitter">
+                            <span class="tooltip">Twitter</span>
+                            <span><i class="fa-brands fa-twitter"></i></span>
+                        </li>
+                        <li class="icon instgram">
+                            <span class="tooltip">Instgram</span>
+                            <span><i class="fa-brands fa-instagram"></i></span>
+                        </li>
+                        <li class="icon github">
+                            <span class="tooltip">Github</span>
+                            <span><i class="fa-brands fa-github"></i></span>
+                        </li>
+                        <li class="icon youtube">
+                            <span class="tooltip">Youtube</span>
+                            <span><i class="fa-brands fa-youtube"></i></span>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+                <a href="#" class="btn">Download CV</a>
+
+            </div>
+
+            <div class="home-img">
+                <img src="{% static 'image/rajupic1.png' %}" alt="Profile Picture">
+            </div>
+        </section>
+
+        <!-- //**  about Section starts here  **// -->
+
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="{% static 'image/aboutpic.png' %}" alt="Profile Picture">
+            </div>
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3>Frontend Developer</h3>
+                <p>"Main ek passionate Full-Stack Developer hoon jo filhal
+                    Computer Science Engineering mein Diploma kar raha hoon. Mujhe Python, Django,
+                    aur MongoDB ke saath scalable web applications banana pasand hai. Ek 'A++' certified professional ke
+                    roop mein,
+                    maine Frontend aur Backend dono mein mazboot pakad banayi hai. Main hamesha nayi technologies
+                    seekhne aur
+                    complex problems ko solve karne ke liye utsahit rehta hoon."
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </section>
+
+        <!-- //**  portfolio Section starts here  **// -->
+
+        <section class="portfolio" id="portfolio">
+            <h2 class="headingg">Our <span>Achivements</span></h2>
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="{% static 'image/qua.png' %}" alt="Project Image">
+                    <div class="portfolio-layer">
+                        <h4>Our Qualifications <i class="fa-solid fa-user-graduate"></i></h4>
+                        <p>"I hold a strong technical foundation with a 12th qualification, an ITI certification, and a
+                            Diploma.
+                            This diverse background combines solid theoretical knowledge with hands-on practical skills.
+                            I,
+                            precise execution, and problem-solving,impactful results in any professional environment."
+                        </p>
+                        <a href="/qualification/" class="viewe">View <i class="fa-solid fa-share-from-square"></i> </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="{% static 'image/cer.png' %}" alt="Project Image">
+                    <div class="portfolio-layer">
+                        <h4>Certifications <i class="fa-solid fa-award"></i></h4>
+                        <p>"I have enhanced my technical expertise through specialized industry certifications that
+                            validate my
+                            skills. These credentials complement my practical education, With validated expertise, I am
+                            equipped to handle
+                            specialized tasks with precision and deliver industry-grade results in every project."</p>
+                        <a href="#" class="viewe">View <i class="fa-solid fa-share-from-square"></i> </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="{% static 'image/portfolio3.webp' %}" alt="Project Image">
+                    <div class="portfolio-layer">
+                        <h4>Web design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="viewe">View <i class="fa-solid fa-share-from-square"></i> </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="{% static 'image/portfolio2.jpg' %}" alt="Project Image">
+                    <div class="portfolio-layer">
+                        <h4>Web design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="viewe">View <i class="fa-solid fa-share-from-square"></i> </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="{% static 'image/portfolio5.jpg' %}" alt="Project Image">
+                    <div class="portfolio-layer">
+                        <h4>Web design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="viewe">View <i class="fa-solid fa-share-from-square"></i> </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="{% static 'image/portfolio6.jpg' %}" alt="Project Image">
+                    <div class="portfolio-layer">
+                        <h4>Web design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="viewe">View <i class="fa-solid fa-share-from-square"></i> </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <!-- //**  Services Section starts here  **// -->
+
+        <section class="services" id="services">
+            <h2 class="headingg">Our <span>Services</span></h2>
+
+            <div class="service-container">
+                <div class="service-box">
+                    <i class='bx bxs-paint'></i>
+                    <h3>Web Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+
+                <div class="service-box">
+                    <i class='bx bxs-code-alt'></i>
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+
+                <div class="service-box">
+                    <i class='bx bxs-mobile-alt'></i>
+                    <h3>Responsive Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- //**  Contact Section starts here  **// -->
+
+        <section class="contact" id="contact">
+            <h2 class="headingg">Contact <span>Me</span></h2>
+            <form action="#">
+                <div class="input-Box">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder=" Email Address" required>
+
+                </div>
+                <div class="input-Box">
+                    <input type="number" placeholder=" Mobile Number" required>
+                    <input type="text" placeholder="Email Subject" required>
+
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+
+            </form>
+
+        </section>
+
+
+
+        {% endblock %}
+
+
+
+        <footer class="footer">
+            <div class="footer-text">
+                <p>&copy; 2025 <s style="color: aqua;">Raju's</s> portfolio ! All Rights Reserved.</p>
+            </div>
+            <div class="footer-icontop">
+                <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+
+
+        </footer>
+    </div>
+
+
+
+
+
+    <script>
+
+        // Menu toggle
+        let menuIcon = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+        };
+
+
+
+        // Toggle Mobile Menu and highlight nav links on scroll
+        let sections = document.querySelectorAll('section');
+        let navLinks = document.querySelectorAll('.navbar a');
+        window.onscroll = () => {
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(links => links.classList.remove('active'));
+                    const activeLink = document.querySelector(".navbar a[href*='" + id + "']");
+                    if (activeLink) activeLink.classList.add('active');
+                };
+            });
+
+            // Sticky Navbar
+            let header = document.querySelector('.header');
+            if (header) header.classList.toggle('sticky', window.scrollY > 100);
+
+            // Remove toggle icon and navbar when click navbar links (scroll)
+            if (menuIcon) menuIcon.classList.remove('bx-x');
+            if (navbar) navbar.classList.remove('active');
+        };
+
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            // reset: true,
+            distance: '80px',
+            duration: 2000,
+            delay: 200
+        });
+
+        sr.reveal('.home-content, .heading', { origin: 'top' });
+        sr.reveal('.home-img, .service-container, .portfolio-box, .contact form', { origin: 'bottom' });
+        sr.reveal('.home-content h1, .about-img', { origin: 'left' });
+        sr.reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".multiple-text", {
+            strings: ["Frontend Developer", "Web Designer", "Freelancer", "Accounting"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+    </script>
+
+</body>
+
+</html>

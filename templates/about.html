@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="{% static 'image/aboutpic.png' %}" alt="Profile Picture">
+    </div>
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Frontend Developer!</h3>
+        <p>"Main ek passionate Full-Stack Developer hoon jo filhal
+                     Computer Science Engineering mein Diploma kar raha hoon. Mujhe Python, Django, 
+                     aur MongoDB ke saath scalable web applications banana pasand hai. Ek 'A++' certified professional ke roop mein,
+                      maine Frontend aur Backend dono mein mazboot pakad banayi hai. Main hamesha nayi technologies seekhne aur
+                     complex problems ko solve karne ke liye utsahit rehta hoon."
+        </p>
+        <a href="#" class="btn">Read More</a>
+    </div>
+</section>
+
+{% endblock %}
