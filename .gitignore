@@ -75,6 +75,8 @@ env/
 *.sqlite3
 staticfiles/
 media/
+static/css/
+static/
 
 # Windows
 *.lnk
