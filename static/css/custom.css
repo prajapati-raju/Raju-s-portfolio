@@ -391,27 +391,27 @@ i:hover {
 }
 
 .service-container {
-
     min-height: 500px;
     display: flex;
     gap: 2rem;
-
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding:10px;
 }
 
 .service-box {
     background: var(--bg-color);
-    padding: 5rem 3rem;
+    padding: 2rem 3rem;
     box-sizing: border-box;
     border-radius: .5rem;
     text-align: center;
     width: 30rem;
-    height: 27rem;
+    height: 28rem;
     border: none;
     box-shadow: 0 0 1rem rgb(93, 93, 93);
     transition: 0.3s;
+    position: relative;
 }
 
 
@@ -424,16 +424,25 @@ i:hover {
     border-radius: 25px 89px;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
-
+   
 }
 
-.service-container .service-box:hover {
+ .service-container .service-box:hover {
     border-color: var(--main-color);
     box-shadow: 0 0 1rem var(--main-color);
     transform: scale(1.02);
-
+    animation: rotates 1s ease-in-out alternate ;
 }
+/*
+@keyframes rotates {
+    0% {
+        transform: rotateY(0);
+    }
 
+    100% {
+        transform: rotateY(360deg);
+    }
+} */
 
 .service-box i {
     font-size: 5.8rem;
