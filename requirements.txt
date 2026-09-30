@@ -83,7 +83,8 @@ opencv-python==4.6.0.66
 openpyxl==3.1.5
 packaging==21.3
 pandas==2.3.3
-Pillow==9.1.1
+Pillow==10.3.0
+pip==23.3.1
 Pint==0.19.2
 pipwin==0.5.2
 playsound==1.2.2
